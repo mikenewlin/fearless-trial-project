@@ -6,12 +6,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"sync/atomic"
 
 	"github.com/gorilla/mux"
 )
-
-var counter uint64
 
 type Item struct {
 	Id   string `json:"id"`
@@ -23,7 +20,6 @@ var items = []Item{}
 func main() {
 	items = append(items, Item{Id: "1", Name: "books"})
 
-	atomic.AddUint64(&counter, 0)
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/items", GetItems).Methods("GET")
