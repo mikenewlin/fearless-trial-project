@@ -3,7 +3,7 @@ Language: GOLANG
 API Router Implementation:  goriella/mux
 
 Github Repo:  mikenewlin/fearless-trial-project
-              git clone https://github.com/mikenewlin/fearless-project-trial <local directory>
+              git clone https://github.com/mikenewlin/fearless-trial-project <local directory>
 
 Local build:  install go and execute in the terminal - go run main.go
               the rest /items api can be accessed with localhost:3000/items
